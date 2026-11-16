@@ -1,6 +1,5 @@
 ## Title
-Reflected XSS 
-**Reflected Cross-Site Scripting (XSS) in the Website Search Box**<!-- Write a short, clear title describing the vulnerability and where it was found. Example: Stored XSS in User Profile -->
+**Reflected XSS in the Website Search Box**<!-- Write a short, clear title describing the vulnerability and where it was found. Example: Stored XSS in User Profile -->
 
 ## Description
 **Affected URL:** https://tutorialrepublic.pwnedbox.site/
