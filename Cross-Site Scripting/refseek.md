@@ -1,5 +1,4 @@
 ## Title
-Reflected XSS 
 Reflected XSS - RefSeek: Academic & Scientific Search Engine
 <!-- Write a short, clear title describing the vulnerability and where it was found. Example: Stored XSS in User Profile -->
 
