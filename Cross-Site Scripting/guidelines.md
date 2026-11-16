@@ -1,6 +1,5 @@
 ## Title
 Reflected XSS - GIGW: Government Website Guidelines Portal
-Reflected Cross-Site Scripting (XSS) in the Website Search Functionality
 <!-- Write a short, clear title describing the vulnerability and where it was found. Example: Stored XSS in User Profile -->
 
 ## Description
