@@ -7,6 +7,7 @@ Reflected XSS - Event Handler Filter
 The application is vulnerable to Reflected XSS through the First Name and Last Name input fields. It does not properly sanitize or encode user-supplied input, allowing injected JavaScript to execute in the browser after submitting the form.
 
 During testing, JavaScript executed successfully from both input fields, confirming that the application does not properly handle the injected scripts.
+By injecting specially crafted JavaScript payloads into both input fields and submitting the form, the application executes the injected scripts directly in the user's browser. The payloads use the JavaScript confirm() function, which generates browser confirmation pop-ups.
 <!-- Explain what the vulnerability is, where it exists, and why it is a security issue. Include the affected URL or endpoint. -->
 
 ## Steps to Reproduce
