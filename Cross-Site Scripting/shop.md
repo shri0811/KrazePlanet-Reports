@@ -4,19 +4,20 @@ Reflected XSS - Category Filter
 
 ## Description
 **Affected URL:** https://shop.pwnedbox.site/
-The application is vulnerable to Reflected XSS through the category GET parameter. The application does not properly sanitize or encode user-supplied input, allowing injected JavaScript to execute in the browser.
-<!-- Explain what the vulnerability is, where it exists, and why it is a security issue. Include the affected URL or endpoint. -->
+The application is vulnerable to Reflected XSS through the category GET parameter. It does not properly validate or encode user input, allowing injected JavaScript to execute directly in the user's browser. This can affect users visiting a specially crafted URL.
+By injecting a JavaScript payload into the URL, an attacker can cause the browser to execute arbitrary JavaScript in the context of the affected website. This could potentially affect users who visit a specially crafted URL.
 
 ## Steps to Reproduce
 Open https://shop.pwnedbox.site/
 
-Modify the URL by adding the following payload:
+Add the following payload to the URL:
 
 ?category=<script>confirm(1)</script>
 
 Press Enter.
 
 Observe the JavaScript confirmation pop-up displaying 1.
+
 <!-- Provide clear, numbered steps so another person can reproduce the issue. Include required requests, parameters, and actions. -->
 
 ## POC (Proof of Concept)
@@ -27,22 +28,34 @@ Observe the JavaScript confirmation pop-up displaying 1.
 <img width="1392" height="572" alt="Screenshot 2026-11-18 062159" src="https://github.com/user-attachments/assets/e3fdb9e4-152a-483c-96da-63d8321a8ba7" />
 
 ## Impact
-<!-- Explain what an attacker could achieve, who could be affected, and the realistic security consequences. -->
-An attacker could execute malicious JavaScript in a victim's browser.
+Affected Parameter: category
+
+Payload:
+
+<script>confirm(1)</script>
+
+Observed Result: A JavaScript confirmation dialog appears, confirming successful script execution through the URL parameter.
+
+Evidence: Screenshots showing the injected URL and confirmation pop-up.
+
+## Impact
+
+Execution of malicious JavaScript in a victim's browser.
 
 Phishing attacks through fake login forms.
 
 Modification of website content.
 
 Potential exposure of sensitive information accessible to JavaScript.
+<!-- Explain what an attacker could achieve, who could be affected, and the realistic security consequences. -->
+
 ## Remediation
-Apply proper input validation.
+Validate and sanitize user input.
 
-Use context-specific output encoding.
+Implement context-specific output encoding.
 
-Avoid rendering untrusted input as executable HTML or JavaScript.
+Avoid inserting untrusted input directly into HTML.
 
 Implement a strong Content Security Policy (CSP).
 
-Regularly perform security testing to identify XSS vulnerabilities.
-<!-- Suggest specific steps to fix the vulnerability. Include secure coding practices or configuration changes where appropriate. -->
+Conduct regular security testing to prevent XSS vulnerabilities.
