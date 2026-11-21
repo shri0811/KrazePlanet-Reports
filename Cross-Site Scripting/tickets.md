@@ -5,11 +5,6 @@ Reflected XSS - Event Handler Filter
 ## Description
 **Affected URL:** https://tickets.pwnedbox.site/
 The application is vulnerable to Reflected XSS through the First Name and Last Name input fields. It does not properly sanitize or encode user-supplied input, allowing injected JavaScript to execute in the browser after submitting the form.
-
-During testing, JavaScript executed successfully from both input fields, confirming that the application does not properly handle the injected scripts.
-By injecting specially crafted JavaScript payloads into both input fields and submitting the form, the application executes the injected scripts directly in the user's browser. The payloads use the JavaScript confirm() function, which generates browser confirmation pop-ups.
-An attacker could potentially exploit this weakness by creating a specially crafted input or URL and convincing users to interact with it. Successful exploitation may lead to phishing attacks, website content manipulation, or exposure of sensitive information accessible to JavaScript.
-
 Therefore, improper handling of user input creates a security risk for users interacting with the affected application.
 <!-- Explain what the vulnerability is, where it exists, and why it is a security issue. Include the affected URL or endpoint. -->
 
@@ -47,6 +42,10 @@ Phishing attacks using fake login forms.
 Modification of website content.
 
 Potential unauthorized actions on behalf of authenticated users.
+
+Unauthorized Actions: If a victim is authenticated, injected scripts may perform actions using the victim's existing session, depending on application security controls.
+
+User Trust and Reputation: Successful exploitation could affect user confidence and damage the reputation of the website.
 <!-- Explain what an attacker could achieve, who could be affected, and the realistic security consequences. -->
 
 ## Remediation
@@ -57,6 +56,12 @@ Implement context-specific output encoding.
 Avoid directly rendering untrusted input as HTML.
 
 Implement a strong Content Security Policy (CSP).
+
+Secure Cookie Configuration: Set session cookies with Http Only, Secure, and appropriate Same Site attributes to reduce session-related risks.
+
+Regular Security Testing: Conduct periodic vulnerability assessments and penetration testing to identify and fix XSS vulnerabilities.
+
+Use Secure Coding Practices: Treat all user-supplied input as untrusted data and ensure it is safely handled throughout the application.
 
 Perform regular security testing to identify XSS vulnerabilities.
 <!-- Suggest specific steps to fix the vulnerability. Include secure coding practices or configuration changes where appropriate. -->
