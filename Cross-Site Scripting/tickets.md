@@ -8,6 +8,9 @@ The application is vulnerable to Reflected XSS through the First Name and Last N
 
 During testing, JavaScript executed successfully from both input fields, confirming that the application does not properly handle the injected scripts.
 By injecting specially crafted JavaScript payloads into both input fields and submitting the form, the application executes the injected scripts directly in the user's browser. The payloads use the JavaScript confirm() function, which generates browser confirmation pop-ups.
+An attacker could potentially exploit this weakness by creating a specially crafted input or URL and convincing users to interact with it. Successful exploitation may lead to phishing attacks, website content manipulation, or exposure of sensitive information accessible to JavaScript.
+
+Therefore, improper handling of user input creates a security risk for users interacting with the affected application.
 <!-- Explain what the vulnerability is, where it exists, and why it is a security issue. Include the affected URL or endpoint. -->
 
 ## Steps to Reproduce
