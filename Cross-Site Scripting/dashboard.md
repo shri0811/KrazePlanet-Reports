@@ -29,7 +29,6 @@ Verify whether any decoding or unsafe output operation occurs before the value i
 <!-- Provide clear, numbered steps so another person can reproduce the issue. Include required requests, parameters, and actions. -->
 
 ## POC (Proof of Concept)
-<img width="515" height="253" alt="image" src="https://github.com/user-attachments/assets/56510fa3-0d45-4d32-9a40-ddfb6d2286d5" />
 
 <img width="1031" height="777" alt="image" src="https://github.com/user-attachments/assets/f7e0119f-bd48-4246-89ef-9ef82f57867f" />
 
