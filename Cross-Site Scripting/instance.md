@@ -36,11 +36,19 @@ Verify that special HTML characters are encoded before being reflected in the re
 <!-- Add screenshots, HTTP requests/responses, payloads, or videos that demonstrate the vulnerability. -->
 
 ## Impact
-No direct Reflected XSS impact can be confirmed from the provided source code.
+If a Reflected XSS vulnerability is identified in another unprotected output location within the Cloud Instance Console, it could have the following security consequences:
 
-The use of htmlspecialchars() provides protection against HTML and JavaScript injection through the two examined GET parameters when used in an appropriate output context.
+Session Hijacking: An attacker may execute JavaScript in a victim's browser and attempt to access sensitive session information, depending on cookie security settings such as HttpOnly.
 
-However, other output locations or unsafe JavaScript and DOM operations would require separate investigation.
+Account Compromise: Malicious scripts could perform unauthorised actions through the victim's authenticated session if the application lacks appropriate protections.
+
+Sensitive Information Disclosure: Attackers may access information displayed within the console or other data exposed to JavaScript in the application's origin.
+
+Phishing Attacks: An attacker could modify the console's displayed content or create fake login prompts to trick users into revealing credentials.
+
+Unauthorised Actions: Malicious JavaScript could potentially perform actions available to the victim within the Cloud Instance Console.
+
+Data Manipulation: Attackers could alter displayed information, modify form values, or manipulate application interactions within the affected page.
 <!-- Explain what an attacker could achieve, who could be affected, and the realistic security consequences. -->
 
 ## Remediation
