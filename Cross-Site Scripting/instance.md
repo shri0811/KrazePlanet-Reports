@@ -6,7 +6,7 @@ Reflected XSS - Cloud Instance Console
 **Affected URL:** https://instance.pwnedbox.site/
 The Cloud Instance Console application accepts user input through the fname and lname GET parameters.
 
-During source code analysis, both parameters were found to be processed using PHP's htmlspecialchars() function with the ENT_QUOTES flag.
+During source code analysis, both parameters were found to be processed using PHP's htmlspecialchars() and the function with the ENT_QUOTES flag.
 
 This function converts special HTML characters and quotes into HTML entities, helping prevent malicious HTML and JavaScript from being executed when the values are displayed in an appropriate HTML context.
 
