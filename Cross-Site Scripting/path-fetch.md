@@ -24,6 +24,7 @@ If executable JavaScript is reflected, verify the behaviour using a harmless Jav
 ## POC (Proof of Concept)
 <img width="737" height="330" alt="Screenshot 2026-11-22 210540" src="https://github.com/user-attachments/assets/01bd3bd6-1863-4206-b97f-09d4af45811c" />
 
+<img width="1027" height="855" alt="image" src="https://github.com/user-attachments/assets/5590a4a7-0af0-4ed4-899f-c9f3428a63ae" />
 <!-- Add screenshots, HTTP requests/responses, payloads, or videos that demonstrate the vulnerability. -->
 
 ## Impact
