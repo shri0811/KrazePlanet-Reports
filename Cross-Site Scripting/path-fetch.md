@@ -10,6 +10,8 @@ The application extracts the requested URL path using parse_url() and decodes it
 <!-- Explain what the vulnerability is, where it exists, and why it is a security issue. Include the affected URL or endpoint. -->
 
 ## Steps to Reproduce
+Open the affected URL: https://path-fetch.pwnedbox.site/
+
 Identify that the application processes the URL path.
 
 Navigate to a path containing URL-encoded special characters.
