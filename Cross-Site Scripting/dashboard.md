@@ -10,7 +10,6 @@ During source code analysis, it was observed that the application uses different
 <!-- Explain what the vulnerability is, where it exists, and why it is a security issue. Include the affected URL or endpoint. -->
 
 ## Steps to Reproduce
-
 Open the affected application: https://dashboard.pwnedbox.site/
 
 Identify the fname and lname GET parameters.
@@ -25,7 +24,7 @@ Compare the encoding behaviour of fname and lname.
 
 Check whether the lname value is reflected into the HTML response.
 
-Verify whether any decoding or unsafe output operation occurs before the value is rendered.
+Verify whether any decoding or unsafe output operation occurs before the value is rendered
 <!-- Provide clear, numbered steps so another person can reproduce the issue. Include required requests, parameters, and actions. -->
 
 ## POC (Proof of Concept)
@@ -33,6 +32,8 @@ Verify whether any decoding or unsafe output operation occurs before the value i
 <img width="1031" height="777" alt="image" src="https://github.com/user-attachments/assets/f7e0119f-bd48-4246-89ef-9ef82f57867f" />
 
 <img width="833" height="247" alt="image" src="https://github.com/user-attachments/assets/bb6fe443-b299-43e1-a1cb-5a4154d82bca" />
+
+<img width="562" height="131" alt="image" src="https://github.com/user-attachments/assets/81564582-a3ab-411f-bafa-358804c5a5ae" />
 
 <!-- Add screenshots, HTTP requests/responses, payloads, or videos that demonstrate the vulnerability. -->
 
