@@ -33,6 +33,8 @@ Verify whether any decoding or unsafe output operation occurs before the value i
 
 <img width="1031" height="777" alt="image" src="https://github.com/user-attachments/assets/f7e0119f-bd48-4246-89ef-9ef82f57867f" />
 
+<img width="833" height="247" alt="image" src="https://github.com/user-attachments/assets/bb6fe443-b299-43e1-a1cb-5a4154d82bca" />
+
 <!-- Add screenshots, HTTP requests/responses, payloads, or videos that demonstrate the vulnerability. -->
 
 ## Impact
