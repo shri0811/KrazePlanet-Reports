@@ -9,7 +9,9 @@ The application accepts user-controlled input through the fname and lname GET pa
 During source code analysis, it was observed that the application uses different encoding functions for these parameters. The fname parameter is processed using PHP's htmlspecialchars() function with the ENT_QUOTES flag, whereas the lname parameter is processed using urlencode().
 <!-- Explain what the vulnerability is, where it exists, and why it is a security issue. Include the affected URL or endpoint. -->
 
-## Steps to ReproduceOpen the affected application: https://dashboard.pwnedbox.site/
+## Steps to Reproduce
+
+Open the affected application: https://dashboard.pwnedbox.site/
 
 Identify the fname and lname GET parameters.
 
